@@ -1,16 +1,171 @@
-# React + Vite
+# React Timer Widget
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A lightweight floating React timer widget that can be embedded into any website using a CDN.
 
-Currently, two official plugins are available:
+## Live CDN
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### Latest version
 
-## React Compiler
+```html
+<script src="https://cdn.jsdelivr.net/gh/my-react-verse/react-timer-widget@v1.0.2/dist/timer-widget.iife.js"></script>
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Specific version
 
-## Expanding the ESLint configuration
+It is recommended to use a specific version in production:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```html
+<script src="https://cdn.jsdelivr.net/gh/my-react-verse/react-timer-widget@v1.0.2/dist/timer-widget.iife.js"></script>
+```
+
+## Usage
+
+No HTML container is required.
+
+Add the CDN script:
+
+```html
+<script src="https://cdn.jsdelivr.net/gh/my-react-verse/react-timer-widget@v1.0.2/dist/timer-widget.iife.js"></script>
+```
+
+Then initialize the widget:
+
+```html
+<script>
+  TimerWidget.mount({
+    minutes: 5,
+    seconds: 0
+  });
+</script>
+```
+
+The widget automatically creates a floating timer on the page.
+
+## Features
+
+* Floating widget
+* Draggable
+* Minimize / restore
+* Start / pause
+* Reset
+* `MM:SS` countdown display
+* No container element required
+* No React installation required in the host application
+
+## Configuration
+
+```javascript
+TimerWidget.mount({
+  minutes: 5,
+  seconds: 0
+});
+```
+
+| Option    | Type   | Description     |
+| --------- | ------ | --------------- |
+| `minutes` | number | Initial minutes |
+| `seconds` | number | Initial seconds |
+
+Example:
+
+```javascript
+TimerWidget.mount({
+  minutes: 10,
+  seconds: 30
+});
+```
+
+Displays:
+
+```text
+10:30 left
+```
+
+## Unmount
+
+`mount()` returns an object that can be used to remove the widget:
+
+```javascript
+const timer = TimerWidget.mount({
+  minutes: 5,
+  seconds: 0
+});
+
+// Remove later
+timer.unmount();
+```
+
+## CDN Versioning
+
+Use Git tags to publish versions.
+
+Example:
+
+```text
+v1.0.0
+v1.0.1
+v1.0.2
+```
+
+CDN URL:
+
+```text
+https://cdn.jsdelivr.net/gh/my-react-verse/react-timer-widget@v1.0.2/dist/timer-widget.iife.js
+```
+
+For production applications, use a specific version instead of `@main`.
+
+## Development
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run development server:
+
+```bash
+npm run dev
+```
+
+Build the CDN widget:
+
+```bash
+npm run build
+```
+
+The generated CDN file will be:
+
+```text
+dist/timer-widget.iife.js
+```
+
+## Publishing a New Version
+
+Build the widget:
+
+```bash
+npm run build
+```
+
+Commit the changes:
+
+```bash
+git add .
+git commit -m "Update timer widget"
+git push origin main
+```
+
+Create a version tag:
+
+```bash
+git tag v1.0.3
+git push origin v1.0.3
+```
+
+The new CDN URL will be:
+
+```text
+https://cdn.jsdelivr.net/gh/my-react-verse/react-timer-widget@v1.0.3/dist/timer-widget.iife.js
+```
