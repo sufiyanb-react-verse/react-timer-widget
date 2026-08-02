@@ -7,7 +7,7 @@ A lightweight floating React timer widget that can be embedded into any website 
 ### Latest version
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/my-react-verse/react-timer-widget@v1.0.2/dist/timer-widget.iife.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/sufiyanb-react-verse/react-timer-widget@v1.0.2/dist/timer-widget.iife.js"></script>
 ```
 
 ### Specific version
@@ -15,7 +15,7 @@ A lightweight floating React timer widget that can be embedded into any website 
 It is recommended to use a specific version in production:
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/my-react-verse/react-timer-widget@v1.0.2/dist/timer-widget.iife.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/sufiyanb-react-verse/react-timer-widget@v1.0.2/dist/timer-widget.iife.js"></script>
 ```
 
 ## Usage
@@ -25,7 +25,7 @@ No HTML container is required.
 Add the CDN script:
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/my-react-verse/react-timer-widget@v1.0.2/dist/timer-widget.iife.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/sufiyanb-react-verse/react-timer-widget@v1.0.2/dist/timer-widget.iife.js"></script>
 ```
 
 Then initialize the widget:
@@ -110,7 +110,7 @@ v1.0.2
 CDN URL:
 
 ```text
-https://cdn.jsdelivr.net/gh/my-react-verse/react-timer-widget@v1.0.2/dist/timer-widget.iife.js
+https://cdn.jsdelivr.net/gh/sufiyanb-react-verse/react-timer-widget@v1.0.2/dist/timer-widget.iife.js
 ```
 
 For production applications, use a specific version instead of `@main`.
@@ -167,5 +167,5 @@ git push origin v1.0.3
 The new CDN URL will be:
 
 ```text
-https://cdn.jsdelivr.net/gh/my-react-verse/react-timer-widget@v1.0.3/dist/timer-widget.iife.js
+https://cdn.jsdelivr.net/gh/sufiyanb-react-verse/react-timer-widget@v1.0.3/dist/timer-widget.iife.js
 ```
