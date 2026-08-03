@@ -26,6 +26,35 @@ const TimerWidget = {
         root.unmount();
       }
     };
+  },
+  mount(options = {}) {
+    // Create container
+    const container = document.createElement("div");
+
+    container.id = "react-timer-widget";
+
+    // Floating position
+    Object.assign(container.style, {
+      position: "fixed",
+      right: "20px",
+      bottom: "20px",
+      zIndex: "999999",
+    });
+
+    document.body.appendChild(container);
+
+    const root = createRoot(container);
+
+    root.render(
+      <Timer {...options} />
+    );
+
+    return {
+      unmount() {
+        root.unmount();
+        container.remove();
+      }
+    };
   }
 };
 

@@ -36,6 +36,7 @@ export default function Timer() {
     return (
         <>
             <div style={{
+                position: "absolute",
                 padding: "20px",
                 border: "1px solid #ddd",
                 borderRadius: "10px",
