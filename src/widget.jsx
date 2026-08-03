@@ -9,10 +9,16 @@ const TimerWidget = {
         ? document.querySelector(selector)
         : selector;
 
+    console.log('version check', 'v1.1.3')
     if (!container) {
       throw new Error("TimerWidget: container not found");
     }
 
+    container.style = {
+        position: 'fixed',
+        right: '20px',
+        bottom: '20px'
+    }
     const root = createRoot(container);
 
     root.render(
