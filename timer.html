@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>Timer Widget Test</title>
+    <title>Timer Widget Test</title>
 </head>
 
 <body>
 
-  <h1>My Website</h1>
+    <h1>My Website</h1>
 
-  <div id="timer"></div>
+    <div id="timer"></div>
 
-  <script src="https://cdn.jsdelivr.net/gh/sufiyanb-react-verse/react-timer-widget@v1.0.2/dist/timer-widget.iife.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/gh/sufiyanb-react-verse/react-timer-widget@v1.1.0/dist/timer-widget.iife.js"></script>
 
-  <script>
-    TimerWidget.mount("#timer");
-  </script>
+    <script>
+        TimerWidget.mount({
+            minutes: 5,
+            seconds: 0
+        });
+    </script>
 
 </body>
+
 </html>
