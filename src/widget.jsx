@@ -14,11 +14,12 @@ const TimerWidget = {
       throw new Error("TimerWidget: container not found");
     }
 
-    container.style = {
+    Object.assign(container.style, {
         position: 'fixed',
         right: '20px',
-        bottom: '20px'
-    }
+        bottom: '20px',
+        zIndex: '9999999'
+    })
     const root = createRoot(container);
 
     root.render(
