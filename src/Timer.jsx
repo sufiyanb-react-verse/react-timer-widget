@@ -33,9 +33,20 @@ export default function Timer() {
 
         return `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
     };
+
+    // const initiateDragging = (e) => {
+
+    //     console.log(e)
+    //     e.clientX = e.clientX + 30
+    //     document.getElementById('timer_container').addEventListener('mousemove', function (mouseE) {
+    //         console.log(mouseE)
+    //         e.clientX = mouseE.clientX + 30
+    //     })
+    // }
+
     return (
         <>
-            <div style={{
+            <div id="timer_container" style={{
                 position: "absolute",
                 padding: "20px",
                 border: "1px solid #ddd",

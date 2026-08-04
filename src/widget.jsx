@@ -16,8 +16,8 @@ const TimerWidget = {
 
     Object.assign(container.style, {
         position: 'fixed',
-        right: '20px',
-        bottom: '20px',
+        right: '20%',
+        bottom: '20%',
         zIndex: '9999999'
     })
     const root = createRoot(container);

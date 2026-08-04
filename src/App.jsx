@@ -10,7 +10,13 @@ function App() {
 
   return (
     <>
-      <Timer />
+      <div style={{
+        position: 'fixed',
+        right: '20%',
+        bottom: '20%'
+      }}>
+        <Timer />
+      </div>
     </>
   )
 }
